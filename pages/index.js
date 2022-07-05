@@ -3,6 +3,7 @@ import Head from "next/head";
 // Components
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import Products from "../components/Products/Products";
+import BlogEvents from "../components/BlogEvents/BlogEvents";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <HeroBanner />
       <Products />
+      <BlogEvents />
     </>
   );
 }
