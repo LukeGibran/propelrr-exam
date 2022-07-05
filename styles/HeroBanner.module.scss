@@ -7,14 +7,13 @@ section#heroBanner {
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  z-index: -2;
   img.banner__blob {
     position: absolute;
     top: -5rem;
-    right: 0;
+    right: -0.6rem;
     height: 120%;
     width: 43%;
-    z-index: -1;
+    z-index: 1;
   }
 
   .banner__container {
@@ -125,6 +124,7 @@ section#heroBanner {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            z-index: 2;
 
             .helmet--shadow {
               margin-top: -7rem;
@@ -139,6 +139,7 @@ section#heroBanner {
     position: absolute;
     top: 50%;
     cursor: pointer;
+    z-index: 2;
 
     svg {
       fill: #fff;
@@ -157,6 +158,8 @@ section#heroBanner {
   }
 
   .share-button {
+    z-index: 2;
+    cursor: pointer;
     position: absolute;
     padding: 0.5rem 0.7rem;
     background: #fff;
