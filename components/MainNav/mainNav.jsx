@@ -13,7 +13,7 @@ const MainHeader = () => {
   const [categoryOpen, setCategoryOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
   return (
-    <nav className="nav">
+    <nav className="nav" id="mainNav">
       <div className="nav__container">
         <div className="nav__logo">
           <h1>EVNX.</h1>

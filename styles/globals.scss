@@ -9,7 +9,13 @@ $primary-color: #ff4f37;
 
 // Components
 @import "MainHeader.module.scss";
+@import "MobileHeader.module.scss";
 
 body {
   font-family: "Montserrat", sans-serif;
+}
+
+// Prevent from scrolling
+.no-scroll {
+  overflow: hidden;
 }
