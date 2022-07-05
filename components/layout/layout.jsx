@@ -4,8 +4,8 @@ import MobileNav from "../MobileNav/mobileNav";
 const Layout = ({ children }) => {
   return (
     <>
-      {/* <MainNav /> */}
-      <MobileNav />
+      <MainNav />
+      {/* <MobileNav /> */}
       <main>{children}</main>
     </>
   );

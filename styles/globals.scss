@@ -6,13 +6,20 @@
 
 // Variables
 $primary-color: #ff4f37;
+$navbar-height: 70px;
 
 // Components
-@import "MainHeader.module.scss";
-@import "MobileHeader.module.scss";
+@import "MainNav.module.scss";
+@import "MobileNav.module.scss";
+@import "Home.module.scss";
+@import "HeroBanner.module.scss";
 
 body {
   font-family: "Montserrat", sans-serif;
+}
+
+.static-height {
+  height: $navbar-height;
 }
 
 // Prevent from scrolling

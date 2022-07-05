@@ -1,0 +1,172 @@
+section#heroBanner {
+  height: 70vh;
+  width: 100%;
+  position: relative;
+  background-image: url("/images/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  z-index: -2;
+  img.banner__blob {
+    position: absolute;
+    top: -5rem;
+    right: 0;
+    height: 120%;
+    width: 43%;
+    z-index: -1;
+  }
+
+  .banner__container {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    z-index: 999;
+    .banner__featured-content {
+      height: 100%;
+      padding: 0 3rem;
+      .banner__card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .card__body {
+          height: 100%;
+          display: flex;
+          justify-content: space-between;
+
+          .card__body-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .card__body-texts {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              color: #fff;
+              text-transform: uppercase;
+              flex: 3;
+              h1 {
+                font-size: 3rem;
+                font-weight: 700;
+                line-height: 0.9;
+                margin-bottom: 1rem;
+                letter-spacing: 0.3rem;
+              }
+
+              p {
+                line-height: 1.4;
+                letter-spacing: 0.1rem;
+              }
+            }
+          }
+
+          .card__details {
+            display: flex;
+            flex: 1;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            .card__details-box {
+              background: #fff;
+              padding: 0.8rem 1rem;
+              display: flex;
+              gap: 0.6rem;
+              border-left: 2px solid #ddd;
+
+              p {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 0.7rem;
+
+                &.number {
+                  color: $primary-color;
+                }
+              }
+
+              span.circle {
+                height: 13px;
+                width: 13px;
+                background-color: $primary-color;
+                border-radius: 50%;
+                position: relative;
+
+                &:before {
+                  content: "";
+                  position: absolute;
+                  top: 1.5px;
+                  right: 0.5px;
+                  background: #000;
+                  width: 50%;
+                  height: 100%;
+                  border-top-right-radius: 110px;
+                  border-bottom-right-radius: 100px;
+                  transform: rotate(40deg);
+                }
+              }
+            }
+
+            .card__details-button {
+              a {
+                text-transform: uppercase;
+                display: inline-block;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 0.7rem;
+                padding: 0.8rem 1rem;
+                background: $primary-color;
+                text-decoration: none;
+                color: #fff;
+              }
+            }
+          }
+
+          .card__body-images {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .helmet--shadow {
+              margin-top: -7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .navigation-arrow {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+
+    svg {
+      fill: #fff;
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &.right {
+      right: 10%;
+    }
+
+    &.left {
+      left: 10%;
+      transform: scaleX(-1);
+    }
+  }
+
+  .share-button {
+    position: absolute;
+    padding: 0.5rem 0.7rem;
+    background: #fff;
+    bottom: 15%;
+    right: 25%;
+    box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.2);
+    svg {
+      fill: #333;
+      width: 1.3rem;
+      height: 1.3rem;
+    }
+  }
+}
