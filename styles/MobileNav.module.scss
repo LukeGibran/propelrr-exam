@@ -3,8 +3,8 @@
   height: 50px;
   position: fixed;
   background: #fff;
+  z-index: 999;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
 
   .nav__container {
     padding: 0 2rem;
@@ -62,6 +62,7 @@
 
               &.open {
                 display: block;
+                z-index: 9999;
               }
 
               .cart__dropdown-container {
@@ -74,6 +75,7 @@
                 font-weight: 600;
                 border-top: 1px solid #ccc;
                 border-bottom: 1px solid #ccc;
+                z-index: 4;
               }
 
               box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
@@ -118,12 +120,14 @@
   top: 0;
   height: 100vh;
   width: 0;
-  background: $primary-color;
+  background: #ff4f37;
   overflow: hidden;
   position: fixed;
+  transition: all 0.3s ease-in-out;
+  z-index: 9999;
 
   &.open {
-    width: 80%;
+    width: 40%;
   }
 
   .sidebar__container {

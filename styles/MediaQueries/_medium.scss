@@ -1,0 +1,44 @@
+@include mediaMd {
+  nav.nav#mainNav {
+    display: none;
+  }
+  .static-height {
+    height: 50px;
+  }
+  nav.nav#mobileNav {
+    display: block;
+  }
+
+  section#heroBanner {
+    .share-button {
+      bottom: 20%;
+    }
+
+    .banner__container {
+      .banner__featured-content {
+        padding: 0;
+
+        .banner__card {
+          .card__body {
+            .card__body-images {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section#productSection {
+    margin-bottom: 2rem;
+    .products__lists {
+      height: auto !important;
+    }
+  }
+
+  section#blogEvents {
+    .blogevents__wrapper {
+      flex-direction: column;
+    }
+  }
+}

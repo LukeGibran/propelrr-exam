@@ -1,0 +1,8 @@
+@include mediaSm {
+  nav.nav#mainNav {
+    display: none;
+  }
+  nav.nav#mobileNav {
+    display: block;
+  }
+}

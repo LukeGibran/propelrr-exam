@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <MainNav />
-      {/* <MobileNav /> */}
+      <MobileNav />
       <main>{children}</main>
     </>
   );

@@ -29,3 +29,10 @@ body {
 .no-scroll {
   overflow: hidden;
 }
+
+nav.nav#mobileNav {
+  display: none;
+}
+
+// Media Queries
+@import "./MediaQueries/all";

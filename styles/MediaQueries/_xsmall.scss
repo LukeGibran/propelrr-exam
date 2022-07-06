@@ -1,0 +1,56 @@
+@include mediaXSm {
+  .sidebar.open {
+    width: 80%;
+  }
+  section#heroBanner {
+    .banner__container {
+      width: 100%;
+      text-align: center;
+
+      .banner__featured-content {
+        .banner__card {
+          .card__body {
+            .card__body-title {
+              .card__details {
+                justify-content: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section#productSection {
+    .products__lists-wrapper {
+      .products__lists {
+        .products__list.first-product {
+          .product__details {
+            .product__details-img {
+              img.product-img {
+                min-width: 240px;
+                min-height: 210px;
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section#blogEvents {
+    .blogevents__wrapper {
+      gap: 1rem;
+      .events {
+        min-width: 300px;
+        max-width: 310px;
+        .events__wrapper {
+          .event__img {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}
