@@ -1,21 +1,42 @@
-const Products = () => {
+import { motion } from "framer-motion";
+const Products = ({ easing, fadeInUp, stagger }) => {
   return (
-    <section id="productSection">
+    <motion.section
+      id="productSection"
+      animate="animate"
+      initial="initial"
+      exit="exit"
+    >
       <div className="section__header">
-        <h1>New Products</h1>
+        <motion.h1 variants={fadeInUp}>New Products</motion.h1>
       </div>
       <div className="products__lists-wrapper">
         <div className="products__lists">
-          <div className="products__list first-product">
+          <motion.div
+            variants={fadeInUp}
+            className="products__list first-product"
+          >
+            <motion.div
+              className="mask"
+              initial={{ width: "100%" }}
+              animate={{ width: 0 }}
+              transition={{
+                delay: 0.1,
+                ease: easing,
+                default: { duration: 0.5 },
+              }}
+            ></motion.div>
             <div className="product__details">
               <div className="product__details-text">
-                <div className="product__title">
+                <motion.div variants={fadeInUp} className="product__title">
                   <h3>HJC CL-17 Captain America (Snell)</h3>
-                </div>
-                <p className="product__price">$350.5</p>
-                <div className="product__button">
+                </motion.div>
+                <motion.p variants={fadeInUp} className="product__price">
+                  $350.5
+                </motion.p>
+                <motion.div variants={fadeInUp} className="product__button">
                   <button>Buy Now</button>
-                </div>
+                </motion.div>
               </div>
               <div className="product__details-img">
                 <img
@@ -25,17 +46,29 @@ const Products = () => {
                 />
               </div>
             </div>
-          </div>
-          <div className="products__list ">
-            <div className="product__title">
+          </motion.div>
+          <motion.div variants={stagger} className="products__list ">
+            <motion.div
+              className="mask"
+              initial={{ width: "100%" }}
+              animate={{ width: 0 }}
+              transition={{
+                delay: 0.1,
+                ease: easing,
+                default: { duration: 0.5 },
+              }}
+            ></motion.div>
+            <motion.div variants={fadeInUp} className="product__title">
               <h3>ZEUS Z-806 NEW SUPERTECH II50 MATT</h3>
-            </div>
+            </motion.div>
             <div className="product__details">
               <div className="product__details-text">
-                <p className="product__price">$350.5</p>
-                <div className="product__button">
+                <motion.p variants={fadeInUp} className="product__price">
+                  $350.5
+                </motion.p>
+                <motion.div variants={fadeInUp} className="product__button">
                   <button>Buy Now</button>
-                </div>
+                </motion.div>
               </div>
               <div className="product__details-img">
                 <img
@@ -45,17 +78,29 @@ const Products = () => {
                 />
               </div>
             </div>
-          </div>
-          <div className="products__list ">
-            <div className="product__title">
+          </motion.div>
+          <motion.div variants={stagger} className="products__list ">
+            <motion.div
+              className="mask"
+              initial={{ width: "100%" }}
+              animate={{ width: 0 }}
+              transition={{
+                delay: 0.1,
+                ease: easing,
+                default: { duration: 0.5 },
+              }}
+            ></motion.div>
+            <motion.div variants={fadeInUp} className="product__title">
               <h3>ARAI TOUR CROSS 3 - DETOUR RED</h3>
-            </div>
+            </motion.div>
             <div className="product__details">
               <div className="product__details-text">
-                <p className="product__price">$350.5</p>
-                <div className="product__button">
+                <motion.p variants={fadeInUp} className="product__price">
+                  $350.5
+                </motion.p>
+                <motion.div variants={fadeInUp} className="product__button">
                   <button>Buy Now</button>
-                </div>
+                </motion.div>
               </div>
               <div className="product__details-img">
                 <img
@@ -65,10 +110,10 @@ const Products = () => {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -16,6 +16,15 @@ section#heroBanner {
     z-index: 1;
   }
 
+  .mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    height: 100%;
+    z-index: 6;
+  }
+
   .banner__container {
     width: 50%;
     height: 100%;
@@ -120,6 +129,10 @@ section#heroBanner {
                 background: $primary-color;
                 text-decoration: none;
                 color: #fff;
+
+                &:hover {
+                  background: darken($primary-color, 10);
+                }
               }
             }
           }

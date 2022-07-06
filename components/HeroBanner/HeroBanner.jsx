@@ -1,28 +1,40 @@
-import Image from "next/image";
-
+import { motion } from "framer-motion";
 // Icons
 import ArrowIcon from "../icons/arrowIcon";
 import ShareIcon from "../icons/shareIcon";
 
-const HeroBanner = () => {
+const HeroBanner = ({ easing, stagger, fadeInUp }) => {
+  console.log(easing);
   return (
-    <>
+    <motion.div exit="exit" initial="initial" animate="animate">
       <div className="static-height"></div>
       <section className="heroBanner" id="heroBanner">
         <img src="/images/blob.png" alt="image blob" className="banner__blob" />
+        <motion.div
+          initial={{ width: "100%" }}
+          animate={{ width: 0 }}
+          transition={{ delay: 0.1, ease: easing, default: { duration: 0.5 } }}
+          className="mask"
+        ></motion.div>
         <div className="banner__container">
           <div className="banner__featured-content">
             <div className="banner__card">
               <div className="card__body">
-                <div className="card__body-title">
-                  <div className="card__body-texts">
-                    <h1>TEIXEIRA ADVENTURE</h1>
-                    <p>
+                <motion.div
+                  variants={stagger}
+                  transition={{ delay: 1 }}
+                  className="card__body-title"
+                >
+                  <motion.div variants={fadeInUp} className="card__body-texts">
+                    <motion.h1 variants={fadeInUp}>
+                      TEIXEIRA ADVENTURE
+                    </motion.h1>
+                    <motion.p variants={fadeInUp}>
                       Advanced polycarbonate <br />
                       composite shell
-                    </p>
-                  </div>
-                  <div className="card__details">
+                    </motion.p>
+                  </motion.div>
+                  <motion.div variants={fadeInUp} className="card__details">
                     <div className="card__details-box">
                       <p>color</p>
                       <span className="circle"></span>
@@ -34,13 +46,21 @@ const HeroBanner = () => {
                     <div className="card__details-button">
                       <a href="#">View Product</a>
                     </div>
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
                 <div className="card__body-images">
-                  <img
+                  <motion.img
                     src="/images/banner-helmet.png"
                     alt="Banner Helmet"
                     className="helmet"
+                    initial={{ y: -30 }}
+                    animate={{ y: 1 }}
+                    transition={{
+                      ease: "linear",
+                      duration: 3,
+                      repeat: Infinity,
+                      repeatType: "mirror",
+                    }}
                   />
                   <img
                     src="/images/banner-helmet-shadow.png"
@@ -62,7 +82,7 @@ const HeroBanner = () => {
           </div>
         </div>
       </section>
-    </>
+    </motion.div>
   );
 };
 

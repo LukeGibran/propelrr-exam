@@ -1,8 +1,15 @@
-const BlogEvents = () => {
+import { motion } from "framer-motion";
+
+const BlogEvents = ({ fadeInUp }) => {
   return (
-    <section id="blogEvents">
+    <motion.section
+      id="blogEvents"
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <div className="blogevents__wrapper">
-        <div className="blogs">
+        <motion.div variants={fadeInUp} className="blogs">
           <div className="blog__header">
             <div className="blog__header-wrapper">
               <h1>BLOG x EVENTS</h1>
@@ -60,8 +67,8 @@ const BlogEvents = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="events">
+        </motion.div>
+        <motion.div variants={fadeInUp} className="events">
           <div className="events__wrapper">
             <div className="event__img">
               <img src="/images/event-helmet.png" alt="Event Helment" />
@@ -81,9 +88,9 @@ const BlogEvents = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

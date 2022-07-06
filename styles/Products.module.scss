@@ -26,6 +26,14 @@ section#productSection {
         background: #f9f9f9;
         padding: 1rem;
         height: 100%;
+        position: relative;
+        .mask {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 115%;
+          background: #fff;
+        }
 
         .product__title {
           width: 80%;
@@ -56,6 +64,9 @@ section#productSection {
                 font-weight: 600;
                 box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
                 letter-spacing: 0.1rem;
+                &:hover {
+                  background: darken($primary-color, 10);
+                }
               }
             }
           }
